@@ -238,10 +238,10 @@ class Note extends FlxSprite
 						skin = 'NOTE_assets_circle';
 					} else {
 						skin = 'NOTE_assets';// for preventing crashes
+					}
+				}
 			}
 		}
-	}
-}
 
 		var animName:String = null;
 		if(animation.curAnim != null) {
