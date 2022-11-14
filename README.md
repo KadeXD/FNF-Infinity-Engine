@@ -2,6 +2,7 @@
 
 based off psych and combied with forever engine
 
+![](logo.png)
 # Installing 
  
  Use Normal Psych Engine 0.5.1 cant really tell you how since i didnt edit the haxelib packges in side Project.xml
@@ -27,6 +28,4 @@ based off psych and combied with forever engine
  - [LeviXDD](https://github.com/LEVIXDDLMAO) - Owner and HTML5 Handler 
  - [MemeHoovy](https://linktr.ee/memehoovy) - Assistant Coder
  - [SanicBTW](https://github.com/SanicBTW) - Added Forever engine Combo and Rank System :D
- 
- 
  
