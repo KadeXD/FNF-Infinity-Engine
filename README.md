@@ -17,12 +17,13 @@ based off psych and combied with forever engine
  - HealthDrain For mod ports 
  - custom hitsounds/titlescreen/misses/pause
  - laneover lay
- - insta death notes
+ - insta death notes 
  
  # Things to get done
 - [ ] Hitsounds
 - [X] Forever Combo
 - [ ] Attempt to Hardcode characters
+- [ ] Fix LanOver Lay
  
  # Credits
  - [LeviXDD](https://github.com/LEVIXDDLMAO) - Owner and HTML5 Handler 
