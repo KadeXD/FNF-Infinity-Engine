@@ -22,7 +22,7 @@ based off psych and combied with forever engine
  # Things to get done
 - [ ] Hitsounds
 - [X] Forever Combo
-- [ ] Attempt to Hardcode characters
+- [ ] Attempt to Hardcode characters ( Like Forever Engine )
 - [ ] Fix LanOver Lay
  
  # Credits
