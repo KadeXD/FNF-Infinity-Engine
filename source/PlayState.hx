@@ -881,7 +881,7 @@ class PlayState extends MusicBeatState
 		if (!ClientPrefs.middleScroll) 
 		{
 			add(laneunderlayOp);
-		  }
+		}
 	  	add(laneunderlay);
 
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
