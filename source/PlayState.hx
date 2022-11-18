@@ -62,7 +62,6 @@ class PlayState extends MusicBeatState
 {
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
-	public var updateUnderlay:Bool = false;
 
 	public static var ratingStuff:Array<Dynamic> = [
 		['F', 0.2], //From 0% to 19%
@@ -877,7 +876,7 @@ class PlayState extends MusicBeatState
 		laneunderlay = new FlxSprite(0, 0).makeGraphic(110 * 4 + 50, FlxG.height * 2);
 		laneunderlay.color = FlxColor.BLACK;
 		laneunderlay.scrollFactor.set();
-        laneunderlay.alpha = 0;
+        laneunderlay.alpha = ClientPrefs.underlaneVisibility - 1;
         laneunderlay.visible = true;
 		if (!ClientPrefs.middleScroll) 
 		{
@@ -1034,7 +1033,6 @@ class PlayState extends MusicBeatState
 		}
 
 		strumLineNotes.cameras = [camHUD];
-		laneunderlay.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
@@ -1048,7 +1046,13 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 
+		// if (SONG.song == 'South')
+		// FlxG.camera.alpha = 0.7;
+		// UI_camera.zoom = 1;
+
+		// cameras = [FlxG.cameras.list[1]];
 		startingSong = true;
+
 
 		// SONG SPECIFIC SCRIPTS
 		#if LUA_ALLOWED
@@ -1482,9 +1486,6 @@ class PlayState extends MusicBeatState
 		if(ret != FunkinLua.Function_Stop) {
 			generateStaticArrows(0);
 			generateStaticArrows(1);
-			laneunderlay.x = playerStrums.members[0].x - 25;
-			laneunderlay.alpha = ClientPrefs.underlaneVisibility - 1;
-			laneunderlay.screenCenter(Y);
 			for (i in 0...playerStrums.length) {
 				setOnLuas('defaultPlayerStrumX' + i, playerStrums.members[i].x);
 				setOnLuas('defaultPlayerStrumY' + i, playerStrums.members[i].y);
@@ -2058,10 +2059,10 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		if (updateUnderlay == true) 
+		/*if (FlxG.keys.justPressed.NINE)
 		{
-			laneunderlay.x = playerStrums.members[0].x - 25;
-		}
+			iconP1.swapOldIcon();
+		}*/
 
 		callOnLuas('onUpdate', [elapsed]);
 
@@ -2211,11 +2212,21 @@ class PlayState extends MusicBeatState
 				persistentDraw = true;
 				paused = true;
 
+				// 1 / 1000 chance for Gitaroo Man easter egg
+				/*if (FlxG.random.bool(0.1))
+				{
+					// gitaroo man easter egg
+					cancelMusicFadeTween();
+					CustomFadeTransition.nextCamera = camOther;
+					MusicBeatState.switchState(new GitarooPause());
+				}
+				else {*/
 				if(FlxG.sound.music != null) {
 					FlxG.sound.music.pause();
 					vocals.pause();
 				}
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+				//}
 		
 				#if desktop
 				DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
