@@ -110,7 +110,7 @@ class PlayState extends MusicBeatState
 
 	// os engine code
 	public var laneunderlay:FlxSprite;
-	public var laneunderlayOp:FlxSprite;
+	// public var laneunderlayOp:FlxSprite;
 	var trailunderdad:FlxTrail;
 	var trailunderbf:FlxTrail;
 
@@ -873,16 +873,15 @@ class PlayState extends MusicBeatState
 		timeBarBG.yAdd = -4;
 		add(timeBarBG);
 
-
 		laneunderlay = new FlxSprite(0, 0).makeGraphic(110 * 4 + 50, FlxG.height * 2);
 		laneunderlay.color = FlxColor.BLACK;
 		laneunderlay.scrollFactor.set();
         laneunderlay.alpha = ClientPrefs.underlaneVisibility - 1;
         laneunderlay.visible = true;
-		if (!ClientPrefs.middleScroll) 
-		{
-			add(laneunderlayOp);
-		  }
+		// if (!ClientPrefs.middleScroll) 
+		// {
+		// 	add(laneunderlayOp);
+		// }
 	  	add(laneunderlay);
 
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
@@ -1497,6 +1496,13 @@ class PlayState extends MusicBeatState
 				//if(ClientPrefs.middleScroll) opponentStrums.members[i].visible = false;
 			}
 
+			if (laneunderlay != null) {
+				laneunderlay.x = playerStrums.members[0].x - 25;
+				laneunderlay.screenCenter(Y);
+			}
+		    // laneunderlayOp.x = opponentStrums.members[0].x - 25;
+		    // laneunderlayOp.screenCenter(Y);
+
 			startedCountdown = true;
 			Conductor.songPosition = 0;
 			Conductor.songPosition -= Conductor.crochet * 5;
@@ -1623,7 +1629,10 @@ class PlayState extends MusicBeatState
 				callOnLuas('onCountdownTick', [swagCounter]);
 
 				swagCounter += 1;
-				// generateSong('fresh');
+
+				if (laneunderlay != null)
+					FlxTween.tween(laneunderlay, {alpha: ClientPrefs.underlaneVisibility}, 0.5, {ease: FlxEase.quadOut});
+				// FlxTween.tween(laneunderlayOp, {alpha: ClientPrefs.opponentUnderlaneVisibility}, 0.5, {ease: FlxEase.quadOut});
 			}, 5);
 		}
 	}
