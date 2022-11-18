@@ -1496,6 +1496,11 @@ class PlayState extends MusicBeatState
 				//if(ClientPrefs.middleScroll) opponentStrums.members[i].visible = false;
 			}
 
+			laneunderlay.x = playerStrums.members[0].x - 25;
+			laneunderlay.screenCenter(Y);
+		    laneunderlayOp.x = opponentStrums.members[0].x - 25;
+		    laneunderlayOp.screenCenter(Y);
+
 			startedCountdown = true;
 			Conductor.songPosition = 0;
 			Conductor.songPosition -= Conductor.crochet * 5;
@@ -1622,7 +1627,9 @@ class PlayState extends MusicBeatState
 				callOnLuas('onCountdownTick', [swagCounter]);
 
 				swagCounter += 1;
-				// generateSong('fresh');
+
+				FlxTween.tween(laneunderlay, {alpha: ClientPrefs.underlaneVisibility}, 0.5, {ease: FlxEase.quadOut});
+				// FlxTween.tween(laneunderlayOp, {alpha: ClientPrefs.opponentUnderlaneVisibility}, 0.5, {ease: FlxEase.quadOut});
 			}, 5);
 		}
 	}
