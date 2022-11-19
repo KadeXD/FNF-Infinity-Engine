@@ -228,6 +228,8 @@ class PlayState extends MusicBeatState
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
+	var feWatermark:FlxText;
+	var infWatermark:FlxText;
 
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
@@ -904,6 +906,22 @@ class PlayState extends MusicBeatState
 			timeTxt.size = 24;
 			timeTxt.y += 3;
 		}
+
+
+		// Watermarks at the upper left corner, this is for Forever Engine Legacy
+		feWatermark = new FlxText(0, FlxG.height - 44, 0, "", 16);
+		feWatermark.setFormat(Paths.font("VCR OSD Mono"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		feWatermark.scrollFactor.set();
+		add(feWatermark);
+
+		// And this is for Infinity Engine
+		infWatermark = new FlxText(0, FlxG.height - 24, 0, "", 16);
+		infWatermark.setFormat(Paths.font("VCR OSD Mono"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		infWatermark.scrollFactor.set();
+		add(infWatermark);
+
+		feWatermark.text = "FOREVER ENGINE LEGACY: v" + menus.MainMenuState.feEngineVersion;
+		infWatermark.text = "INFINITY ENGINE: v" + menus.MainMenuState.infEngineVersion;
 
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
 		grpNoteSplashes.add(splash);
