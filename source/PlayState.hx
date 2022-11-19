@@ -909,19 +909,17 @@ class PlayState extends MusicBeatState
 
 
 		// Watermarks at the upper left corner, this is for Forever Engine Legacy
-		feWatermark = new FlxText(0, FlxG.height - 44, 0, "", 16);
+		feWatermark = new FlxText(0, FlxG.height - 44, 0, "FOREVER ENGINE LEGACY: v" + menus.MainMenuState.feEngineVersion, 16);
 		feWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		feWatermark.scrollFactor.set();
 		add(feWatermark);
 
 		// And this is for Infinity Engine
-		infWatermark = new FlxText(0, FlxG.height - 24, 0, "", 16);
+		infWatermark = new FlxText(0, FlxG.height - 24, 0,"INFINITY ENGINE: v" + menus.MainMenuState.infEngineVersion, 16);
 		infWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		infWatermark.scrollFactor.set();
 		add(infWatermark);
 
-		feWatermark.text = "FOREVER ENGINE LEGACY: v" + menus.MainMenuState.feEngineVersion;
-		infWatermark.text = "INFINITY ENGINE: v" + menus.MainMenuState.infEngineVersion;
 
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
 		grpNoteSplashes.add(splash);
@@ -1063,6 +1061,8 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+		infWatermark.cameras = [camHUD];
+		feWatermark.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
