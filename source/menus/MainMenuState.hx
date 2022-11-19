@@ -27,6 +27,7 @@ class MainMenuState extends MusicBeatState
 {
 	public static var infEngineVersion:String = '0.1'; //This is also used for Discord RPC
 	public static var feEngineVersion:String = '0.3.1'; //This is also used for Discord RPC
+	public static var infdebugEngineVersion:String = '0.1 - Debug'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -125,15 +126,22 @@ class MainMenuState extends MusicBeatState
 		}
 
 		FlxG.camera.follow(camFollowPos, null, 1);
-
+		#if debug
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Infinity Engine Debug v" + infEngineVersion, 12);
+		versionShit.scrollFactor.set();
+		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(versionShit);
+		#else
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Infinity Engine v" + infEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+		#end
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "Psych Engine v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+
 
 		// NG.core.calls.event.logEvent('swag').send();
 

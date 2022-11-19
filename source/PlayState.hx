@@ -915,10 +915,17 @@ class PlayState extends MusicBeatState
 		add(feWatermark);
 
 		// And this is for Infinity Engine
+		#if debug
+		infWatermark = new FlxText(0, FlxG.height - 24, 0,"INFINITY ENGINE DEBUG: v" + menus.MainMenuState.infEngineVersion, 16);
+		infWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		infWatermark.scrollFactor.set();
+		add(infWatermark);
+		#else
 		infWatermark = new FlxText(0, FlxG.height - 24, 0,"INFINITY ENGINE: v" + menus.MainMenuState.infEngineVersion, 16);
 		infWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		infWatermark.scrollFactor.set();
 		add(infWatermark);
+		#end
 
 
 		var splash:NoteSplash = new NoteSplash(100, 100, 0);
@@ -1038,6 +1045,17 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
+		#if debug
+		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "SHOWCASE DEBUG", 32);
+		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.scrollFactor.set();
+		botplayTxt.borderSize = 1.25;
+		botplayTxt.visible = cpuControlled;
+		add(botplayTxt);
+		if(ClientPrefs.downScroll) {
+			botplayTxt.y = timeBarBG.y - 78;
+		}
+		#else
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
@@ -1047,6 +1065,7 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
 		}
+		#end
 
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];

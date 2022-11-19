@@ -29,4 +29,10 @@ based off psych and combied with forever engine
  - [LeviXDD](https://github.com/LEVIXDDLMAO) - Owner and HTML5 Handler 
  - [MemeHoovy](https://linktr.ee/memehoovy) - Assistant Coder
  - [SanicBTW](https://github.com/SanicBTW) - Added Forever engine Combo and Rank System :D
- 
+
+ # Extra ( Mods ports for Infinity engine )
+ - D Side ( not public ) Link - NON
+ - Hypno lullaby v2 ( not public ) Link - NON
+ - Mod Menu ( remaking ) Link - NON
+ - Baddies ( not public ) Link - NON
+ -  
