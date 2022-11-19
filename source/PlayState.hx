@@ -910,13 +910,13 @@ class PlayState extends MusicBeatState
 
 		// Watermarks at the upper left corner, this is for Forever Engine Legacy
 		feWatermark = new FlxText(0, FlxG.height - 44, 0, "", 16);
-		feWatermark.setFormat(Paths.font("VCR OSD Mono"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		feWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		feWatermark.scrollFactor.set();
 		add(feWatermark);
 
 		// And this is for Infinity Engine
 		infWatermark = new FlxText(0, FlxG.height - 24, 0, "", 16);
-		infWatermark.setFormat(Paths.font("VCR OSD Mono"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		infWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		infWatermark.scrollFactor.set();
 		add(infWatermark);
 
