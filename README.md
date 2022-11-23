@@ -36,4 +36,4 @@ based off psych and combied with forever engine
  - Mod Menu ( remaking ) Link - NON
  - Baddies ( not public ) Link - NON
  - FWF ( Not public ) Link - NON
- - Forever Psych ( Public, Using infinity engine but with alot of forever engine style's ) - https://github.com/LEVIXDDLMAO/ForeverPsych 
+ - Forever Psych ( Public, Using infinity engine but with forever engine style ) - https://github.com/LEVIXDDLMAO/ForeverPsych 
