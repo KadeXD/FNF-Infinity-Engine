@@ -29,8 +29,7 @@ using StringTools;
 
 class LanSubState extends BaseOptionsMenu
 {
-	public function new()
-	{
+	public function new(){
    var option:Option = new Option('LAN MODE',
 			'Check this if you want to play LAN',
 			'lanmode',
