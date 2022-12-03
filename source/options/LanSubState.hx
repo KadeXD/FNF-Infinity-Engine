@@ -37,5 +37,6 @@ class LanSubState extends BaseOptionsMenu
 			false);
 		addOption(option);
 
-        }
+			super();  //idk if fixes options but im trying here
+	}
 }
