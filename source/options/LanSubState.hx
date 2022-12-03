@@ -29,7 +29,11 @@ using StringTools;
 
 class LanSubState extends BaseOptionsMenu
 {
-	public function new(){
+	public function new()
+	{
+		title = 'LAN Options';
+		rpcTitle = 'Lan mode'; //for Discord Rich Presence
+
    var option:Option = new Option('LAN MODE',
 			'Check this if you want to play LAN',
 			'lanmode',
