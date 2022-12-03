@@ -35,7 +35,7 @@ To install LuaJIT do this: `haxelib install linc_luajit` on a Command prompt/Pow
 - [ ] Hitsounds
 - [X] Forever Combo
 - [ ] Attempt to Hardcode characters ( Like Forever Engine )
-- [ ] Fix LanOver Lay
+- [X] Fix LanOver Lay
  
  # Credits
  - [LeviXDD](https://github.com/LEVIXDDLMAO) - Owner and HTML5 Handler 
