@@ -5,10 +5,21 @@ based off psych and combied with forever engine
 ![](logo.png)
 # Installing 
  
- Use Normal Psych Engine 0.5.1 cant really tell you how since i didnt edit the haxelib packges in side Project.xml
+ You must have the [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
+
+Follow a Friday Night Funkin' source code compilation tutorial, after this you will need to install LuaJIT.
+
+To install LuaJIT do this: `haxelib install linc_luajit` on a Command prompt/PowerShell
+
+...Or if you don't want your mod to be able to run .lua scripts, delete the "LUA_ALLOWED" line on Project.xml
  
  # Downloads 
   - [GitHub](https://github.com/LEVIXDDLMAO/FNF-Infinity-Engine)
+
+  ## Mod Support
+* Probably one of the main points of this engine, you can code in .lua files outside of the source code, making your own weeks without even messing with the source!
+* Comes with a Mod Organizing/Disabling Menu. 
+
   
  # Features
  - HTML5 mod support
@@ -18,6 +29,7 @@ based off psych and combied with forever engine
  - custom hitsounds/titlescreen/misses/pause
  - laneover lay
  - insta death notes 
+ - Cool debug stuff
  
  # Things to get done
 - [ ] Hitsounds
