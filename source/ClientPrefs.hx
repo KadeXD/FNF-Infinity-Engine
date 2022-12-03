@@ -19,6 +19,7 @@ class ClientPrefs {
 	public static var violence:Bool = true;
 	public static var camZooms:Bool = true;
 	public static var hideHud:Bool = false;
+    public static var hitsoundVolume:Float = 0;
 	public static var noteOffset:Int = 0;
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 	public static var imagesPersist:Bool = false;
@@ -114,6 +115,7 @@ class ClientPrefs {
 		FlxG.save.data.goodWindow = goodWindow;
 		FlxG.save.data.badWindow = badWindow;
 		FlxG.save.data.safeFrames = safeFrames;
+		FlxG.save.data.hitsoundVolume = hitsoundVolume;
 		FlxG.save.data.gameplaySettings = gameplaySettings;
 		FlxG.save.data.controllerMode = controllerMode;
 	
@@ -216,6 +218,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.controllerMode != null) {
 			controllerMode = FlxG.save.data.controllerMode;
+		}
+		if(FlxG.save.data.hitsoundVolume != null) {
+			hitsoundVolume = FlxG.save.data.hitsoundVolume;
 		}
 		if(FlxG.save.data.underlaneVisibility != null) {
 			underlaneVisibility = FlxG.save.data.underlaneVisibility;
