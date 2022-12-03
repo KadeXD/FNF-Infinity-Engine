@@ -31,10 +31,7 @@ class LanSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'LAN BullShit';
-        rpcTitle = 'LAN Settings Menu'; //for Discord Rich Presence
-		
-		var option:Option = new Option('LAN MODE',
+   var option:Option = new Option('LAN MODE',
 			'Check this if you want to play LAN',
 			'lanmode',
 			'bool',
