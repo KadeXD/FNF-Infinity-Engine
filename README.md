@@ -30,12 +30,14 @@ To install LuaJIT do this: `haxelib install linc_luajit` on a Command prompt/Pow
  - laneover lay
  - insta death notes 
  - Cool debug stuff
+ - LAN Mode / Playing online
  
  # Things to get done
 - [ ] Hitsounds
 - [X] Forever Combo
 - [ ] Attempt to Hardcode characters ( Like Forever Engine )
 - [X] Fix LanOver Lay
+- [ ] ONLINE MODE
  
  # Credits
  - [LeviXDD](https://github.com/LEVIXDDLMAO) - Owner and HTML5 Handler 
