@@ -37,7 +37,7 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-        #if ONLINE_MODE 'lan' #end //removing mod support for LAN support
+        #if ONLINE_MODE 'lan' #end,
         'awards', 
 		'credits',
 		'donate', 
