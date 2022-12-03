@@ -37,7 +37,7 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-        #if ONLINE_MODE 'lan' #end,
+        // #if ONLINE_MODE 'lan' #end,
         'awards', 
 		'credits',
 		'donate', 
@@ -242,10 +242,10 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new menus.StoryMenuState());
 									case 'freeplay':
 										MusicBeatState.switchState(new menus.FreeplayState());
-									#if ONLINE_MODE
-									case 'LAN':
-										MusicBeatState.switchState(new menus.OnlineMenuState());
-									#end
+									//#if ONLINE_MODE
+									//case 'LAN':
+										//MusicBeatState.switchState(new menus.OnlineMenuState());
+									//#end
 									case 'awards':
 										MusicBeatState.switchState(new menus.AchievementsMenuState());
 									case 'credits':
