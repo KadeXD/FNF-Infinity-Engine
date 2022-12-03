@@ -37,8 +37,7 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-		// #if ONLINEMODE 'lan' #end
-		'mods', 
+        #if ONLINE_MODE 'lan' #end //removing mod support for LAN support
         'awards', 
 		'credits',
 		'donate', 
@@ -243,13 +242,9 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new menus.StoryMenuState());
 									case 'freeplay':
 										MusicBeatState.switchState(new menus.FreeplayState());
-									#if MODS_ALLOWED
-									case 'mods':
-										MusicBeatState.switchState(new menus.ModsMenuState());
-									#end
-									#if html5
-									case 'mods':
-											MusicBeatState.switchState(new menus.FreeplayState());
+									#if ONLINE_MODE
+									case 'LAN':
+										MusicBeatState.switchState(new menus.OnlineMenuState());
 									#end
 									case 'awards':
 										MusicBeatState.switchState(new menus.AchievementsMenuState());
