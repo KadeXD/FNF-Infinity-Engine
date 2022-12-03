@@ -27,7 +27,7 @@ import flixel.graphics.FlxGraphic;
 
 using StringTools;
 
-class GameplaySettingsSubState extends BaseOptionsMenu
+class LanSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
