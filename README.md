@@ -1,6 +1,6 @@
 ## Infinity Engine
 
-based off psych and combied with forever engine
+based off psych and combied with forever engine ( yes in fact @LEVIXDDLMAO still owns this, just moved this to @InfinityEngineDev )
 
 ![](logo.png)
 # Installing 
