@@ -83,7 +83,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 		add(iconP2);
 
 		scoreBar = new FlxText(FlxG.width / 2, Math.floor(healthBarBG.y + 40), 0, scoreDisplay);
-		scoreBar.setFormat(Paths.font('vcr.ttf'), 18, FlxColor.WHITE);
+		scoreBar.setFormat(Paths.font('fullphanmuff.ttf'), 18, FlxColor.WHITE);
 		scoreBar.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
 		updateScoreText();
 		// scoreBar.scrollFactor.set();
@@ -91,14 +91,14 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 		add(scoreBar);
 
 		cornerMark = new FlxText(0, 0, 0, engineDisplay);
-		cornerMark.setFormat(Paths.font('vcr.ttf'), 18, FlxColor.WHITE);
+		cornerMark.setFormat(Paths.font('fullphanmuff.ttf'), 18, FlxColor.WHITE);
 		cornerMark.setBorderStyle(OUTLINE, FlxColor.BLACK, 2);
 		add(cornerMark);
 		cornerMark.setPosition(FlxG.width - (cornerMark.width + 5), 5);
 		cornerMark.antialiasing = true;
 
 		centerMark = new FlxText(0, 0, 0, '- ${infoDisplay + " [" + diffDisplay}] -');
-		centerMark.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE);
+		centerMark.setFormat(Paths.font('fullphanmuff.ttf'), 24, FlxColor.WHITE);
 		centerMark.setBorderStyle(OUTLINE, FlxColor.BLACK, 2);
 		add(centerMark);
 		if (Init.trueSettings.get('Downscroll'))
@@ -124,7 +124,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 					+ (i * counterTextSize), 0, '', counterTextSize);
 				if (!left)
 					textAsset.x -= textAsset.text.length * counterTextSize;
-				textAsset.setFormat(Paths.font("vcr.ttf"), counterTextSize, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+				textAsset.setFormat(Paths.font("fullphanmuff.ttf"), counterTextSize, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 				textAsset.scrollFactor.set();
 				timingsMap.set(judgementNameArray[i], textAsset);
 				add(textAsset);

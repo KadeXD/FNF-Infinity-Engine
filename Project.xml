@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin' Infinity Engine" file="InfinityEngine" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="0.5.1" company="ShadowMario" />
+	<app title="Friday Night Funkin' Infinity Engine" file="InfinityEngine" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="0.2.7.1" company="ShadowMario" />
 	<app title="Infinity Engine" if="web" />
 	<app title="Infinity Debug" if="debug" />
 

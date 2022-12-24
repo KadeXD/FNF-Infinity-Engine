@@ -120,20 +120,20 @@ class DialogueCharacterEditorState extends MusicBeatState
 		hudGroup.add(box);
 
 		tipText = new FlxText(10, 10, FlxG.width - 20, TIP_TEXT_MAIN, 8);
-		tipText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		tipText.setFormat(Paths.font("fullphanmuff.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		tipText.cameras = [camOther];
 		tipText.scrollFactor.set();
 		add(tipText);
 
 		offsetLoopText = new FlxText(10, 10, 0, '', 32);
-		offsetLoopText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		offsetLoopText.setFormat(Paths.font("fullphanmuff.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		offsetLoopText.cameras = [camOther];
 		offsetLoopText.scrollFactor.set();
 		add(offsetLoopText);
 		offsetLoopText.visible = false;
 
 		offsetIdleText = new FlxText(10, 46, 0, '', 32);
-		offsetIdleText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		offsetIdleText.setFormat(Paths.font("fullphanmuff.ttf"), 32, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		offsetIdleText.cameras = [camOther];
 		offsetIdleText.scrollFactor.set();
 		add(offsetIdleText);
@@ -395,7 +395,7 @@ class DialogueCharacterEditorState extends MusicBeatState
 		updateTextBox();
 	}
 
-	private static var DEFAULT_TEXT:String = 'Lorem ipsum dolor sit amet';
+	private static var DEFAULT_TEXT:String = 'AUTO TEXT';
 	function reloadText() {
 		if(daText != null) {
 			daText.killTheTimer();

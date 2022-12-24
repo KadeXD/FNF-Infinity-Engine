@@ -473,7 +473,7 @@
 				]
 			]
 		],
-		"gfVersion": "erect-gf",
+		"gfVersion": "gf",
 		"notes": [
 			{
 				"sectionNotes": [
@@ -6327,6 +6327,16 @@
 				"bpm": 123,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"bpm": 123,
+				"changeBPM": false,
+				"mustHitSection": true,
+				"gfSection": false,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"altAnim": false
 			}
 		],
 		"player2": "dad",
