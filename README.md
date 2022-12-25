@@ -16,9 +16,8 @@ To install LuaJIT do this: `haxelib install linc_luajit` on a Command prompt/Pow
  # Downloads 
   - [GitHub](https://github.com/LEVIXDDLMAO/FNF-Infinity-Engine)
 
-  ## Mod Support
-* Probably one of the main points of this engine, you can code in .lua files outside of the source code, making your own weeks without even messing with the source!
-* Comes with a Mod Organizing/Disabling Menu. 
+  ## LAN Support
+* the main part i wanna do this engine lmao
 
   
  # Features
