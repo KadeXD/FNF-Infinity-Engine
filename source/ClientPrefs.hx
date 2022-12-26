@@ -30,6 +30,7 @@ class ClientPrefs {
 	public static var noteSkinSettings:String = 'Classic';
 	public static var characterTrail:Bool = false;
 	public static var noReset:Bool = false;
+	public static var pauseMusic:String = 'Tea Time';
 	public static var healthBarAlpha:Float = 1;
 	public static var controllerMode:Bool = false;
 	public static var lanmode:Bool = false;
@@ -108,6 +109,7 @@ class ClientPrefs {
 		FlxG.save.data.noReset = noReset;
 		FlxG.save.data.healthBarAlpha = healthBarAlpha;
 		FlxG.save.data.comboOffset = comboOffset;
+		FlxG.save.data.pauseMusic = pauseMusic;
 		FlxG.save.data.achievementsMap = Achievements.achievementsMap;
 		FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
 
@@ -223,6 +225,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.hitsoundVolume != null) {
 			hitsoundVolume = FlxG.save.data.hitsoundVolume;
+		}
+		if(FlxG.save.data.pauseMusic != null) {
+			pauseMusic = FlxG.save.data.pauseMusic;
 		}
 		if(FlxG.save.data.underlaneVisibility != null) {
 			underlaneVisibility = FlxG.save.data.underlaneVisibility;
