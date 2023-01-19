@@ -1,6 +1,6 @@
 ## Infinity Engine
 
-based off psych and combied with forever engine ( yes in fact @LEVIXDDLMAO still owns this, just moved this to @InfinityEngineDev )
+based off psych and combied with forever engine ( yes in fact This engine is not ment for fucking corruption, this is for making Psych better then it was so please leave me alone  )
 
 ![](logo.png)
 # Installing 
