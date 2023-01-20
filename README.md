@@ -1,6 +1,6 @@
 ## Infinity Engine
 
-based off psych and combied with forever engine ( yes in fact This engine is not ment for fucking corruption, this is for making Psych better then it was so please leave me alone  )
+based off psych and used code from forever engine ( yes in fact This engine is not ment for fucking corruption, this is for making Psych better then it was so please leave me alone  )
 
 ![](logo.png)
 # Installing 
