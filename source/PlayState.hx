@@ -2227,7 +2227,7 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		if(ratingName == '?') {
+		if(ratingName == 'F') {
 			scoreTxt.text = "Score: " + songScore + " • Accuracy: 0% • Combo Breaks: " + songMisses + " • Rank: " + ratingName;
 		} else {
 			scoreTxt.text = "Score: " + songScore + " • Accuracy: " + Highscore.floorDecimal(ratingPercent * 100, 2) + "% " + ratingFC + " • Combo Breaks: " + songMisses + " • Rank: " + ratingName;
@@ -4251,7 +4251,7 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	public var ratingName:String = '?';
+	public var ratingName:String = 'F';
 	public var ratingPercent:Float;
 	public var ratingFC:String;
 	public function RecalculateRating() {
@@ -4263,7 +4263,7 @@ class PlayState extends MusicBeatState
 		if(ret != FunkinLua.Function_Stop)
 		{
 			if(totalPlayed < 1) //Prevent divide by 0
-				ratingName = '?';
+				ratingName = 'F';
 			else
 			{
 				// Rating Percent
