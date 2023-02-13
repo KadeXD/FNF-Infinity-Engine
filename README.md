@@ -3,9 +3,12 @@
 based off psych and used code from forever engine ( yes in fact This engine is not ment for fucking corruption, this is for making Psych better then it was so please leave me alone  )
 
 ![](logo.png)
+
 # Installing 
  
  You must have the [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
+ 
+ ![Repo size](https://img.shields.io/github/repo-size/LEVIXDDLMAO/FNF-Infinity-Engine)
 
 Follow a Friday Night Funkin' source code compilation tutorial, after this you will need to install LuaJIT.
 
